@@ -1,23 +1,84 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dL3-lG-Izx"/>
+                        <viewControllerLayoutGuide type="bottom" id="QLY-o5-AvO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CB00001" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-RJ-CM8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="OCI-ih-L2S">
+                                <rect key="frame" x="20" y="188" width="280" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="Hdw-Q7-pIY"/>
+                                    <constraint firstAttribute="width" constant="280" id="SN9-z8-vDu"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="122" id="g3R-Xu-cxN"/>
+                                    <constraint firstAttribute="height" constant="122" id="sls-rY-COq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QLY-o5-AvO" firstAttribute="top" secondItem="EuZ-RJ-CM8" secondAttribute="bottom" id="5Ql-bg-aZl"/>
+                            <constraint firstItem="EuZ-RJ-CM8" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="G2g-GI-g3X"/>
+                            <constraint firstAttribute="trailing" secondItem="EuZ-RJ-CM8" secondAttribute="trailing" id="Qgy-0e-C3B"/>
+                            <constraint firstItem="QLY-o5-AvO" firstAttribute="top" secondItem="EuZ-RJ-CM8" secondAttribute="bottom" id="SzY-bZ-Aeu"/>
+                            <constraint firstItem="EuZ-RJ-CM8" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Yb5-KJ-tjU"/>
+                            <constraint firstItem="EuZ-RJ-CM8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="c84-DH-zS7"/>
+                            <constraint firstAttribute="trailing" secondItem="EuZ-RJ-CM8" secondAttribute="trailing" id="cMB-b7-CGc"/>
+                            <constraint firstAttribute="centerX" secondItem="OCI-ih-L2S" secondAttribute="centerX" id="fv3-Kg-a8J"/>
+                            <constraint firstItem="EuZ-RJ-CM8" firstAttribute="centerY" secondItem="OCI-ih-L2S" secondAttribute="centerY" constant="35" id="hI7-j2-INI"/>
+                            <constraint firstItem="EuZ-RJ-CM8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="via-4L-4ES"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="EuZ-RJ-CM8" id="u1D-Jh-u7i"/>
+                        <outlet property="predictionLabel" destination="OCI-ih-L2S" id="Qji-e7-b2s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="-13"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bgd-wv-7Ta">
+            <objects>
+                <viewController id="d1B-Xa-jxh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ovr-xb-O8D"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y74-wW-taH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F26-v6-5ty">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7JE-Uk-t3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="36" y="-13"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CB00001" width="320" height="568"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

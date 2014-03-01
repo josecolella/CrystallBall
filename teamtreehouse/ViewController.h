@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CrystalBall;
 
 @interface ViewController : UIViewController
+#pragma mark - UIViewController Attributes
+@property (strong, nonatomic) CrystalBall * crystalBall;
+@property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
+//@property (strong, nonatomic) UIButton *predictButton;
 
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
+#pragma mark - UIViewController Methods
+- (void) makePrediction;
 @end
