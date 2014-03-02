@@ -8,16 +8,24 @@
 
 #import "ViewController.h"
 #import "CrystalBall.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    SystemSoundID soundEffect;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"crystal_ball" ofType:@"mp3"];
+    NSURL *soundUrl = [NSURL fileURLWithPath:soundPath];
+    AudioServicesCreateSystemSoundID(CFBridgingRetain(soundUrl), &soundEffect);
+    
     self.crystalBall = [[CrystalBall alloc] init];
     self.backgroundImageView.animationImages = [[NSArray alloc] initWithObjects:
                                                 [UIImage imageNamed:@"CB00001"],
@@ -117,6 +125,12 @@
     [self.backgroundImageView startAnimating];
     self.predictionLabel.text = [self.crystalBall randomPrediction];
     self.predictionLabel.textColor = [self.crystalBall randomTextColor];
+    AudioServicesPlaySystemSound(soundEffect);
+    
+    [UIView animateWithDuration:6.0 animations:^{
+        self.predictionLabel.alpha = 1.0f;
+    
+    }];
 }
 
 //Action associated with a Button
@@ -131,6 +145,7 @@
 
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     self.predictionLabel.text = nil;
+    self.predictionLabel.alpha = 0.0f;
 }
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
@@ -147,6 +162,7 @@
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     self.predictionLabel.text = nil;
+    self.predictionLabel.alpha = 0.0f;
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
